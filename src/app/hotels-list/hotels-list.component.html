@@ -1,0 +1,23 @@
+<div class="element-left">
+  <div class="element-bg-img"><img src="assets/images/{{selectedHotel.weather.icon}}" alt="" class="img-responsive"> </div>
+  <div class="element-left-bottom">
+    <div class="ele-strip">
+      <ul>
+        <li *ngFor="let currentFilter of filterTypes"><a href="#" (click)="applyHotelFilter($event, currentFilter)" >{{currentFilter}}</a></li>
+      </ul>
+    </div>
+    <div class="village">
+      <h3>List Of Hotels</h3>
+      <span class="line"> </span>
+      <div class="activity_box">
+        <div class="scrollbar" id="style-2">
+          <app-hotel-card
+            [hotel]="currentHotel"
+            *ngFor="let currentHotel of dataHotels | hotelsFilter: filter"
+            (click)="onCardClicked(currentHotel)">
+          </app-hotel-card>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

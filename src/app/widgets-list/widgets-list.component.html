@@ -1,0 +1,26 @@
+<div class="element-right">
+  <div class="temperatur">
+    <h5>{{hotel.weather.title}}</h5>
+    <span class="w-line"> </span>
+    <span class="cloud"> </span>
+    <h2>{{hotel.weather.temperature}}<sup class="degree">°</sup></h2>
+    <h6>Water {{hotel.weather.water}}<sup class="degree">°</sup></h6>
+  </div>
+  <div class="teddy-bear">
+    <div class="teddy-text">
+      <h4>{{hotel.social_info.title}}</h4>
+      <span class="w-line"> </span>
+      <img src="assets/images/{{hotel?.social_info?.img}}" alt=""  class="img-responsive img-circle">
+    </div>
+    <div class="teddy-follow">
+      <ul>
+        <li class="folw-h"><h3>{{hotel.social_info.followers}}</h3>
+          <p>Followers</p>
+        </li>
+        <li><h3>{{hotel.social_info.following}}</h3>
+          <p>Following</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
